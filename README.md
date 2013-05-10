@@ -1,4 +1,4 @@
 project_euler
 =============
 
-Project Euler solutions
+Project Euler solutions. See http://projecteuler.net/.
