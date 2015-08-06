@@ -1,6 +1,8 @@
 
 # What is the largest prime factor of the number 600851475143 ?
 
+from math import sqrt
+
 N = 600851475143
 
 def primes(n):
@@ -8,7 +10,7 @@ def primes(n):
     Prime numbers up to n generator.
     Source: http://programmingpraxis.com/programming-with-prime-numbers-source-code-in-python/
     '''
-    if type(n) != int and type(n) != long:
+    if type(n) != int:
         raise TypeError('must be integer')
     if n < 2:
         raise ValueError('must be greater than one')
@@ -29,9 +31,9 @@ def primes(n):
         i += 1; p += 2
     return ps
 
+if __name__ == '__main__':
+    myprimes = primes(int(sqrt(N)))
 
-myprimes = primes(int(sqrt(N)))
-
-for i in myprimes:
-    if N%i == 0:
-        print(i)
+    for i in myprimes:
+        if N%i == 0:
+            print(i)
